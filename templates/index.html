@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>F&amp;Y Solutions — Virtual Assistance</title>
+  <meta name="description" content="Asistentes virtuales especializados en servicios de Medicaid para agentes de seguros de salud en los 50 estados." />
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='fonts.css') }}" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════
+       HEADER / NAV
+  ═══════════════════════════════════════ -->
+
+  <header class="site-header" id="inicio">
+    <nav class="nav-inner">
+      <a href="#inicio" class="nav-logo" aria-label="F&amp;Y Solutions — Inicio">
+        <img src="static/Logo de F&Y.png" alt="F&amp;Y Solutions logo" class="logo-img" />
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks" role="list">
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#cumplimiento">Cumplimiento</a></li>
+        <li><a href="#nosotros">Nosotros</a></li>
+        <li><a href="#contacto" class="nav-cta">Contáctanos</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ═══════════════════════════════════════
+         HERO
+    ═══════════════════════════════════════ -->
+    <section class="hero" id="hero">
+      <div class="hero-bg-placeholder" aria-hidden="true">
+        <!-- Sube tu imagen de fondo aquí: static/hero-bg.jpg -->
+      </div>
+      <div class="hero-overlay" aria-hidden="true"></div>
+      <div class="hero-content container">
+        <p class="hero-eyebrow">Expertos en Soluciones de Asistencia Virtual</p>
+        <h1 class="hero-headline">
+          Tu equipo de soporte,<br />sin los costos de uno propio.
+        </h1>
+        <p class="hero-sub">
+          Asistentes virtuales entrenados exclusivamente en programas de Medicaid,
+          gestión de licencias y cumplimiento CMS. Diseñados para que los agentes
+          de seguros de salud escalen su negocio con confianza.
+        </p>
+        <a href="#contacto" class="btn btn-primary">Habla con un especialista</a>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         SERVICIOS
+    ═══════════════════════════════════════ -->
+    <section class="section services" id="servicios">
+      <div class="container">
+        <div class="section-header">
+          <h2>Lo que hacemos por ti</h2>
+          <p class="section-lead">
+            Cada servicio fue construido alrededor de las necesidades reales
+            de los agentes de seguros de salud que operan con planes de salud.
+          </p>
+        </div>
+
+        <div class="services-grid">
+
+          <article class="service-card">
+            <div class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="24" cy="16" r="9" stroke="currentColor" stroke-width="2.5"/>
+                <path d="M6 42c0-9.941 8.059-18 18-18s18 8.059 18 18" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3>Asistentes Virtuales Especializados</h3>
+            <p>
+              Profesionales capacitados exclusivamente en el ecosistema Medicaid: elegibilidad,
+              inscripciones, renovaciones y manejo de casos. Trabajan como una extensión
+              de tu agencia, sin los costos de contratación directa.
+            </p>
+            <ul class="service-features">
+              <li>Gestión de cartera de clientes Medicaid</li>
+              <li>Seguimiento de inscripciones y renovaciones</li>
+              <li>Soporte administrativo en tiempo real</li>
+              <li>Comunicación directa con asegurados</li>
+            </ul>
+          </article>
+
+          <article class="service-card service-card--accent">
+            <div class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="8" y="6" width="32" height="36" rx="3" stroke="currentColor" stroke-width="2.5"/>
+                <path d="M16 16h16M16 23h16M16 30h10" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3>Gestión de Licencias en los 50 Estados</h3>
+            <p>
+              Nos encargamos del ciclo completo de tus licencias de seguros de salud:
+              solicitudes, renovaciones, educación continua (CE) y correcciones ante
+              los departamentos de seguros estatales.
+            </p>
+            <ul class="service-features">
+              <li>Renovaciones a tiempo en todos los estados</li>
+              <li>Gestión de créditos de educación continua</li>
+              <li>Alertas de vencimiento y seguimiento proactivo</li>
+              <li>Corrección de registros ante reguladores</li>
+            </ul>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M24 4L6 12v14c0 10.493 7.67 20.322 18 23 10.33-2.678 18-12.507 18-23V12L24 4z" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/>
+                <path d="M16 24l5 5 11-11" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h3>Cumplimiento y Auditoría CMS</h3>
+            <p>
+              Mantenemos tus operaciones alineadas con los requisitos del Centers for Medicaid Services. Revisamos procesos, documentación y
+              registros para blindarte ante auditorías federales.
+            </p>
+            <ul class="service-features">
+              <li>Revisión de cumplimiento CMS</li>
+              <li>Preparación para auditorías federales</li>
+              <li>Actualización ante cambios regulatorios</li>
+              <li>Documentación de procesos y trazabilidad</li>
+            </ul>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         SEGURIDAD Y CUMPLIMIENTO
+    ═══════════════════════════════════════ -->
+    <section class="section compliance" id="cumplimiento">
+      <div class="container">
+        <div class="compliance-inner">
+          <div class="compliance-text">
+            <h2>Seguridad y cumplimiento sin compromisos</h2>
+            <p>
+              Operamos bajo los estándares más estrictos de la industria de seguros de
+              salud federal. La protección de los datos de tus clientes y el cumplimiento
+              regulatorio no son opcionales para nosotros, son la base de todo lo que hacemos.
+            </p>
+            <a href="#contacto" class="btn btn-outline">Ver nuestro protocolo de seguridad</a>
+          </div>
+
+          <div class="compliance-pillars">
+
+            <div class="pillar">
+              <div class="pillar-icon" aria-hidden="true">
+                <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M20 3L4 10v11c0 8.74 6.39 16.93 15 19 8.61-2.07 15-10.26 15-19V10L20 3z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                  <rect x="14" y="17" width="12" height="10" rx="1.5" stroke="currentColor" stroke-width="2"/>
+                  <path d="M17 17v-3a3 3 0 016 0v3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <h4>Datos encriptados</h4>
+              <p>Todos los archivos y comunicaciones viajan cifrados con TLS 1.3 y en reposo con AES-256.</p>
+            </div>
+
+            <div class="pillar">
+              <div class="pillar-icon" aria-hidden="true">
+                <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="20" cy="20" r="16" stroke="currentColor" stroke-width="2"/>
+                  <path d="M20 10v10l6 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <h4>Alineados con CMS</h4>
+              <p>Nuestros procesos están diseñados y actualizados conforme a las directrices del CMS y sus ciclos de cumplimiento.</p>
+            </div>
+
+            <div class="pillar">
+              <div class="pillar-icon" aria-hidden="true">
+                <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="6" y="4" width="28" height="32" rx="3" stroke="currentColor" stroke-width="2"/>
+                  <path d="M13 14h14M13 20h14M13 26h8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <h4>Acuerdos de confidencialidad</h4>
+              <p>Todos nuestros asistentes firman NDA y están entrenados en manejo ético de información sensible de salud.</p>
+            </div>
+
+            <div class="pillar">
+              <div class="pillar-icon" aria-hidden="true">
+                <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="20" cy="20" r="16" stroke="currentColor" stroke-width="2"/>
+                  <path d="M13 20l5 5 9-10" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <h4>Auditorías periódicas</h4>
+              <p>Revisamos nuestros propios procesos internamente de forma regular para garantizar la trazabilidad de cada operación.</p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         NOSOTROS / GALERÍA
+    ═══════════════════════════════════════ -->
+    <section class="section about" id="nosotros">
+      <div class="container">
+        <div class="section-header">
+          <h2>El equipo detrás de tu éxito</h2>
+          <p class="section-lead">
+            Personas reales, comprometidas con los resultados de cada agente que confía en nosotros.
+          </p>
+        </div>
+
+        <div class="gallery-grid">
+          <div class="gallery-item">
+            <div class="gallery-placeholder" aria-label="Espacio para foto de equipo">
+              <span>Sube tu foto aquí</span>
+            </div>
+            <p class="gallery-caption">Nombre del colaborador · Cargo</p>
+          </div>
+
+          <div class="gallery-item">
+            <div class="gallery-placeholder" aria-label="Espacio para foto de equipo">
+              <span>Sube tu foto aquí</span>
+            </div>
+            <p class="gallery-caption">Nombre del colaborador · Cargo</p>
+          </div>
+
+          <div class="gallery-item">
+            <div class="gallery-placeholder" aria-label="Espacio para foto de equipo">
+              <span>Sube tu foto aquí</span>
+            </div>
+            <p class="gallery-caption">Nombre del colaborador · Cargo</p>
+          </div>
+
+          <div class="gallery-item">
+            <div class="gallery-placeholder" aria-label="Espacio para foto de equipo">
+              <span>Sube tu foto aquí</span>
+            </div>
+            <p class="gallery-caption">Nombre del colaborador · Cargo</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         CONTACTO
+    ═══════════════════════════════════════ -->
+    <section class="section contact" id="contacto">
+      <div class="container">
+        <div class="contact-inner">
+
+          <div class="contact-info">
+            <h2>Hablemos hoy</h2>
+            <p>
+              ¿Listo para delegar la carga administrativa de tu agencia? Escríbenos
+              por el canal que prefieras o usa el formulario.
+            </p>
+
+            <div class="contact-channels">
+
+              <a href="#"
+                onclick="copiarCorreo(event)"
+                class="channel-btn channel-btn--email"
+                aria-label="Copiar correo de F&amp;Y Solutions">
+              <span class="channel-icon" style="background: transparent !important; border-radius: 0 !important;" aria-hidden="true">
+                <img src="static/gmail.png" alt="Correo electrónico logo" class="channel-logo" />
+              </span>
+              <span class="channel-text">
+                <strong>Correo electrónico</strong>
+                <!-- Se agregó un ID para manipular el texto -->
+              <span id="correo-texto">Click para copiar</span>
+              </span>
+              </a>
+
+              <script>
+                function copiarCorreo(event) {
+                  // Evita que la página salte hacia arriba al hacer clic en el enlace con "#"
+                  event.preventDefault(); 
+
+                  // Captura el elemento y el texto del correo
+                  const elementoTexto = document.getElementById("correo-texto");
+                  const correo = "fysolutionsas@gmail.com"; 
+                  // Copia al portapapeles
+                  navigator.clipboard.writeText(correo).then(() => {
+                    // Muestra el mensaje de confirmación
+                    elementoTexto.innerText = "¡Copiado!";
+
+                    // Restaura el correo original después de 2 segundos
+                    setTimeout(() => {
+                      elementoTexto.innerText = correo;
+                    }, 2000);
+                  });
+                }
+              </script>
+
+              <a href="https://wa.me/573012430126"
+                 target="_blank"
+                 rel="noopener noreferrer"
+                 class="channel-btn channel-btn--whatsapp"
+                 aria-label="Contactar por WhatsApp">
+                <span class="channel-icon" style="background: transparent !important; border-radius: 0 !important;" aria-hidden="true">
+                  <img src="static/whatsapp.png" alt="WhatsApp logo" class="channel-logo" />
+                </span>
+                <span class="channel-text">
+                  <strong>WhatsApp</strong>
+                  <span>Respuesta rápida · Mensaje directo</span>
+                </span>
+              </a>
+
+            </div>
+          </div>
+
+          <div class="contact-form-wrap">
+            <form class="contact-form" id="contactForm" novalidate>
+              <div class="form-group">
+                <label for="nombre">Nombre completo</label>
+                <input type="text" id="nombre" name="nombre"
+                       placeholder="Tu nombre" autocomplete="name" maxlength="30" required></textarea>
+              </div>
+
+              <div class="form-group">
+                <label for="email">Correo electrónico</label>
+                <input type="email" id="email" name="email"
+                       placeholder="tu@correo.com" autocomplete="email"  maxlength="35" required></textarea>
+              </div>
+
+              <div class="form2-group">
+                <label for="mensaje">¿En qué podemos ayudarte?</label>
+                <textarea id="mensaje" name="mensaje" rows="4" 
+                        placeholder="Cuéntanos sobre tu agencia y lo que necesitas..." maxlength="350" required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-block" id="submitBtn">
+                Enviar mensaje
+              </button>
+
+              <div class="form-feedback" id="formFeedback" role="alert" aria-live="polite"></div>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ═══════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════ -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <img src="static/Logo de F&Y.png" alt="F&amp;Y Solutions" class="footer2-logo" />
+        <p>Asistencia virtual especializada para agentes de seguros de salud y vida.</p>
+      </div>
+
+      <div class="footer-social">
+        <p class="footer-social-label">Síguenos</p>
+        <div class="social-links">
+          <a href="https://www.instagram.com/fy.solutions/" target="_blank" rel="noopener noreferrer"
+             class="social-link" aria-label="Instagram de F&amp;Y Solutions">
+              <img src="static/instagram.png" alt="F&amp;Y Solutions" class="footer-logo" />
+            <span>Instagram</span>
+          </a>
+          <a href="https://www.facebook.com/FYSolutionsCorp?locale=es_LA" target="_blank" rel="noopener noreferrer"
+             class="social-link" aria-label="Facebook de F&amp;Y Solutions">
+              <img src="static/facebook.png" alt="F&amp;Y Solutions" class="footer-logo" />
+            <span>Facebook</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; <span id="year"></span> F&amp;Y Solutions Asistencia Virtual. Todos los derechos reservados.</p>
+            <p><span id="year"></span> Bogotá - Miami</p>
+    </div>
+  </footer>
+
+  <script>
+    // ── Año dinámico en footer ──────────────────────────────
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // ── Menú móvil ─────────────────────────────────────────
+    const toggle = document.getElementById('navToggle');
+    const navLinks = document.getElementById('navLinks');
+    toggle.addEventListener('click', () => {
+      const open = navLinks.classList.toggle('is-open');
+      toggle.setAttribute('aria-expanded', open);
+      toggle.setAttribute('aria-label', open ? 'Cerrar menú' : 'Abrir menú');
+    });
+
+    // Cierra menú al hacer clic en un enlace
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('is-open');
+        toggle.setAttribute('aria-expanded', 'false');
+        toggle.setAttribute('aria-label', 'Abrir menú');
+      });
+    });
+
+    // ── Header scroll ───────────────────────────────────────
+    const header = document.querySelector('.site-header');
+    window.addEventListener('scroll', () => {
+      header.classList.toggle('scrolled', window.scrollY > 40);
+    }, { passive: true });
+
+    // ── Formulario de contacto ──────────────────────────────
+    const form = document.getElementById('contactForm');
+    const feedback = document.getElementById('formFeedback');
+    const submitBtn = document.getElementById('submitBtn');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      feedback.textContent = '';
+      feedback.className = 'form-feedback';
+
+      const payload = {
+        nombre:  document.getElementById('nombre').value.trim(),
+        email:   document.getElementById('email').value.trim(),
+        mensaje: document.getElementById('mensaje').value.trim()
+      };
+
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Enviando…';
+
+      try {
+        const res = await fetch('/contacto', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+        const data = await res.json();
+
+        feedback.textContent = data.message;
+        feedback.classList.add(data.success ? 'feedback-ok' : 'feedback-err');
+
+        if (data.success) form.reset();
+      } catch {
+        feedback.textContent = 'Error de conexión. Inténtalo de nuevo.';
+        feedback.classList.add('feedback-err');
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Enviar mensaje';
+      }
+    });
+  </script>
+
+</body>
+</html>
