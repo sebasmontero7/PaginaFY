@@ -49,3 +49,4 @@ Este es un proyecto estructurado con HTML, CSS y Python. No requiere de una inst
 git clone [https://github.com/sebasmontero7/PaginaFY.git](https://github.com/sebasmontero7/PaginaFY.git)
 cd PaginaFY
 open templates/index.html
+```
