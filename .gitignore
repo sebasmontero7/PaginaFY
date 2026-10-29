@@ -1,1 +1,5 @@
-app.py
+.env
+.venv/
+py.venv/
+__pycache__/
+*.py[cod]

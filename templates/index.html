@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>F&amp;Y Solutions — Virtual Assistance</title>
   <meta name="description" content="Asistentes virtuales especializados en servicios de Medicaid para agentes de seguros de salud en los 50 estados." />
-  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
-  <link rel="stylesheet" href="{{ url_for('static', filename='fonts.css') }}" />
+  <link rel="stylesheet" href="../static/style.css">
+  <link rel="stylesheet" href="../fonts/fonts.css">
 </head>
 <body>
 
@@ -17,7 +17,7 @@
   <header class="site-header" id="inicio">
     <nav class="nav-inner">
       <a href="#inicio" class="nav-logo" aria-label="F&amp;Y Solutions — Inicio">
-        <img src="static/Head y Footer/Logo de F&Y.png" alt="F&amp;Y Solutions logo" class="logo-img" />
+        <img src="../static/Head y Footer/Logo de F&Y.png" alt="F&amp;Y Solutions logo" class="logo-img" />
       </a>
       <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
         <span></span><span></span><span></span>
@@ -137,7 +137,7 @@
 
             <div class="pillar">
               <div class="pillar-icon" aria-hidden="true">
-                <img src="static/Seguridad y cumplimiento/datos encriptados.jpg" alt="Icono de datos encriptados" class="pillar-logo" />
+                <img src="../static/Seguridad y cumplimiento/datos encriptados.jpg" alt="" class="pillar-logo" />
               </div>
               <h4>Datos encriptados</h4>
               <p>Todos los archivos y comunicaciones viajan cifrados con nosotros.</p>
@@ -145,7 +145,7 @@
 
             <div class="pillar">
               <div class="pillar-icon" aria-hidden="true">
-                <img src="static/Seguridad y cumplimiento/alineados cms.jpg" alt="Icono de alineación con CMS" class="pillar-logo" />
+                <img src="../static/Seguridad y cumplimiento/alineados cms.jpg" alt="" class="pillar-logo" />
               </div>
               <h4>Alineados con CMS</h4>
               <p>Nuestros procesos están diseñados y actualizados conforme a las directrices del CMS y sus ciclos de cumplimiento.</p>
@@ -153,7 +153,7 @@
 
             <div class="pillar">
               <div class="pillar-icon" aria-hidden="true">
-                <img src="static/Seguridad y cumplimiento/acuerdos confidencialidad.jpg" alt="Icono de acuerdos de confidencialidad" class="pillar-logo" />
+                <img src="../static/Seguridad y cumplimiento/acuerdos confidencialidad.jpg" alt="" class="pillar-logo" />
               </div>
               <h4>Acuerdos de confidencialidad</h4>
               <p>Todos nuestros asistentes firman NDA y están entrenados en manejo ético de información sensible de salud.</p>
@@ -161,12 +161,7 @@
 
             <div class="pillar">
               <div class="pillar-icon" aria-hidden="true">
-                <img src="static/Seguridad y cumplimiento/auditorias.png" alt="Icono de auditorías periódicas" class="pillar-logo" />
-              </div>
-              <h4>Auditorías periódicas</h4>
-              <p>Revisamos nuestros propios procesos internamente de forma regular para garantizar la trazabilidad de cada operación.</p>
-            </div>
-                </svg>
+                <img src="../static/Seguridad y cumplimiento/auditorias.png" alt="" class="pillar-logo" />
               </div>
               <h4>Auditorías periódicas</h4>
               <p>Revisamos nuestros propios procesos internamente de forma regular para garantizar la trazabilidad de cada operación.</p>
@@ -192,7 +187,7 @@
         <div class="gallery-grid">
           <div class="gallery-item">
             <div class="gallery-placeholder" aria-label="Espacio para foto de equipo">
-              <img src="static/El equipo detras/lewan.jpg" alt="Foto del equipo de F&amp;Y Solutions" class="gallery-photo" />
+              <img src="../static/El equipo detras/lewan.jpg" alt="Foto del equipo de F&amp;Y Solutions" class="gallery-photo" />
             </div>
             <p class="gallery-caption">Nombre del colaborador · Cargo</p>
           </div>
@@ -237,40 +232,17 @@
 
             <div class="contact-channels">
 
-              <a href="#"
-                onclick="copiarCorreo(event)"
+              <a href="mailto:fysolutionsas@gmail.com"
                 class="channel-btn channel-btn--email"
-                aria-label="Copiar correo de F&amp;Y Solutions">
+                aria-label="Enviar correo a F&amp;Y Solutions">
               <span class="channel-icon" style="background: transparent !important; border-radius: 0 !important;" aria-hidden="true">
-                <img src="static/Hablemos hoy/gmail.png" alt="Correo electrónico logo" class="channel-logo" />
+                <img src="../static/Hablemos hoy/gmail.png" alt="" class="channel-logo" />
               </span>
               <span class="channel-text">
                 <strong>Correo electrónico</strong>
-                <!-- Se agregó un ID para manipular el texto -->
-              <span id="correo-texto">Click para copiar</span>
+              <span>fysolutionsas@gmail.com</span>
               </span>
               </a>
-
-              <script>
-                function copiarCorreo(event) {
-                  // Evita que la página salte hacia arriba al hacer clic en el enlace con "#"
-                  event.preventDefault(); 
-
-                  // Captura el elemento y el texto del correo
-                  const elementoTexto = document.getElementById("correo-texto");
-                  const correo = "fysolutionsas@gmail.com"; 
-                  // Copia al portapapeles
-                  navigator.clipboard.writeText(correo).then(() => {
-                    // Muestra el mensaje de confirmación
-                    elementoTexto.innerText = "¡Copiado!";
-
-                    // Restaura el correo original después de 2 segundos
-                    setTimeout(() => {
-                      elementoTexto.innerText = correo;
-                    }, 2000);
-                  });
-                }
-              </script>
 
               <a href="https://wa.me/573012430126"
                  target="_blank"
@@ -278,7 +250,7 @@
                  class="channel-btn channel-btn--whatsapp"
                  aria-label="Contactar por WhatsApp">
                 <span class="channel-icon" style="background: transparent !important; border-radius: 0 !important;" aria-hidden="true">
-                  <img src="static/Hablemos hoy/whatsapp.png" alt="WhatsApp logo" class="channel-logo" />
+                  <img src="../static/Hablemos hoy/whatsapp.png" alt="" class="channel-logo" />
                 </span>
                 <span class="channel-text">
                   <strong>WhatsApp</strong>
@@ -294,13 +266,13 @@
               <div class="form-group">
                 <label for="nombre">Nombre completo</label>
                 <input type="text" id="nombre" name="nombre"
-                  placeholder="Tu nombre" autocomplete="name" maxlength="30" required></textarea>
+                  placeholder="Tu nombre" autocomplete="name" maxlength="80" required>
               </div>
 
               <div class="form-group">
                 <label for="email">Correo electrónico</label>
                 <input type="email" id="email" name="email"
-                  placeholder="tu@correo.com" autocomplete="email"  maxlength="35" required></textarea>
+                  placeholder="tu@correo.com" autocomplete="email" maxlength="254" required>
               </div>
 
               <div class="form2-group">
@@ -329,7 +301,7 @@
   <footer class="site-footer">
     <div class="container footer-inner">
       <div class="footer-brand">
-        <img src="static/Head y Footer/Logo de F&Y.png" alt="F&amp;Y Solutions" class="footer2-logo" />
+        <img src="../static/Head y Footer/Logo de F&Y.png" alt="F&amp;Y Solutions" class="footer2-logo" />
         <p>Asistencia virtual especializada para agentes de seguros de salud y vida.</p>
       </div>
 
@@ -338,12 +310,12 @@
         <div class="social-links">
           <a href="https://www.instagram.com/fy.solutions/" target="_blank" rel="noopener noreferrer"
              class="social-link" aria-label="Instagram de F&amp;Y Solutions">
-              <img src="static/Head y Footer/instagram.png" alt="F&amp;Y Solutions" class="footer-logo" />
+              <img src="../static/Head y Footer/instagram.png" alt="" class="footer-logo" />
             <span>Instagram</span>
           </a>
           <a href="https://www.facebook.com/FYSolutionsCorp?locale=es_LA" target="_blank" rel="noopener noreferrer"
              class="social-link" aria-label="Facebook de F&amp;Y Solutions">
-              <img src="static/Head y Footer/facebook.png" alt="F&amp;Y Solutions" class="footer-logo" />
+              <img src="../static/Head y Footer/facebook.png" alt="" class="footer-logo" />
             <span>Facebook</span>
           </a>
         </div>
@@ -352,7 +324,7 @@
 
     <div class="footer-bottom">
       <p>&copy; <span id="year"></span> F&amp;Y Solutions Asistencia Virtual. Todos los derechos reservados.</p>
-            <p><span id="year"></span> Bogotá - Miami</p>
+            <p>Bogotá - Miami</p>
     </div>
   </footer>
 
@@ -404,7 +376,7 @@
       submitBtn.textContent = 'Enviando…';
 
       try {
-        const res = await fetch('/contacto', {
+        const res = await fetch("{{ url_for('contacto') }}", {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(payload)
