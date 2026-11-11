@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>F&amp;Y Solutions - Virtual Assistance</title>
   <meta name="description" content="Asistentes virtuales especializados en servicios de Medicaid para agentes de seguros de salud en los 50 estados." />
-  <link rel="stylesheet" href="../static/style.css">
-  <link rel="stylesheet" href="../fonts/fonts.css">
-  <link rel="icon" href="../static/Head y Footer/Logo de F&Y.png" type="image/png">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='fonts.css') }}">
+  <link rel="icon" href="{{ url_for('static', filename='Head y Footer/Logo de F&Y.png') }}" type="image/png">
 </head>
 <body>
 
@@ -18,7 +18,7 @@
   <header class="site-header" id="inicio">
     <nav class="nav-inner">
       <a href="#inicio" class="nav-logo" aria-label="F&amp;Y Solutions — Inicio">
-        <img src="../static/Head y Footer/Logo de F&Y.png" alt="F&amp;Y Solutions logo" class="logo-img" />
+        <img src="{{ url_for('static', filename='Head y Footer/Logo de F&Y.png') }}" alt="F&amp;Y Solutions logo" class="logo-img" />
       </a>
       <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
         <span></span>
@@ -142,7 +142,7 @@
 
             <div class="pillar">
               <div class="pillar-icon" aria-hidden="true">
-                <img src="../static/Seguridad y cumplimiento/datos encriptados.jpg" alt="" class="pillar-logo" />
+                <img src="{{ url_for('static', filename='Seguridad y cumplimiento/datos encriptados.jpg') }}" alt="" class="pillar-logo" />
               </div>
               <h4>Datos encriptados</h4>
               <p>Todos los archivos y comunicaciones viajan cifrados con nosotros.</p>
@@ -150,7 +150,7 @@
 
             <div class="pillar">
               <div class="pillar-icon" aria-hidden="true">
-                <img src="../static/Seguridad y cumplimiento/alineados cms.jpg" alt="" class="pillar-logo" />
+                <img src="{{ url_for('static', filename='seguridad_cumplimiento/alineados_cms.jpg') }}" alt="Alineados CMS" class="pillar-logo" />
               </div>
               <h4>Alineados con CMS</h4>
               <p>Nuestros procesos están diseñados y actualizados conforme a las directrices del CMS y sus ciclos de cumplimiento.</p>
@@ -158,7 +158,7 @@
 
             <div class="pillar">
               <div class="pillar-icon" aria-hidden="true">
-                <img src="../static/Seguridad y cumplimiento/acuerdos confidencialidad.jpg" alt="" class="pillar-logo" />
+                <img src="{{ url_for('static', filename='Seguridad y cumplimiento/acuerdos confidencialidad.jpg') }}" alt="" class="pillar-logo" />
               </div>
               <h4>Acuerdos de confidencialidad</h4>
               <p>Todos nuestros asistentes firman NDA y están entrenados en manejo ético de información sensible de salud.</p>
@@ -166,7 +166,7 @@
 
             <div class="pillar">
               <div class="pillar-icon" aria-hidden="true">
-                <img src="../static/Seguridad y cumplimiento/auditorias.png" alt="" class="pillar-logo" />
+                <img src="{{ url_for('static', filename='Seguridad y cumplimiento/auditorias.png') }}" alt="" class="pillar-logo" />
               </div>
               <h4>Auditorías periódicas</h4>
               <p>Revisamos nuestros propios procesos internamente de forma regular para garantizar la trazabilidad de cada operación.</p>
@@ -192,14 +192,14 @@
         <div class="gallery-grid">
           <div class="gallery-item">
             <div class="gallery-placeholder" aria-label="Espacio para foto de equipo">
-              <img src="../static/El equipo detras/freddy.jpg" alt="Foto del equipo de F&amp;Y Solutions" class="gallery-photo" />
+              <img src="{{ url_for('static', filename='El equipo detras/freddy.jpg') }}" alt="Foto del equipo de F&amp;Y Solutions" class="gallery-photo" />
             </div>
             <p class="gallery-caption">Freddy Montero · CEO</p>
           </div>
 
           <div class="gallery-item">
             <div class="gallery-placeholder" aria-label="Espacio para foto de equipo">
-              <img src="../static/El equipo detras/sebas.jpg" alt="Foto del equipo de F&amp;Y Solutions" class="gallery-photo" />
+              <img src="{{ url_for('static', filename='El equipo detras/sebas.jpg') }}" alt="Foto del equipo de F&amp;Y Solutions" class="gallery-photo" />
             </div>
             <p class="gallery-caption">Sebastian Montero · Administrador TI</p>
           </div>
@@ -227,7 +227,7 @@
                 class="channel-btn channel-btn--email"
                 aria-label="Enviar correo a F&amp;Y Solutions">
               <span class="channel-icon" style="background: transparent !important; border-radius: 0 !important;" aria-hidden="true">
-                <img src="../static/Hablemos hoy/gmail.png" alt="" class="channel-logo" />
+                <img src="{{ url_for('static', filename='Hablemos hoy/gmail.png') }}" alt="" class="channel-logo" />
               </span>
               <span class="channel-text">
                 <strong>Correo electrónico</strong>
@@ -241,7 +241,7 @@
                  class="channel-btn channel-btn--whatsapp"
                  aria-label="Contactar por WhatsApp">
                 <span class="channel-icon" style="background: transparent !important; border-radius: 0 !important;" aria-hidden="true">
-                  <img src="../static/Hablemos hoy/whatsapp.png" alt="" class="channel-logo" />
+                  <img src="{{ url_for('static', filename='Hablemos hoy/whatsapp.png') }}" alt="" class="channel-logo" />
                 </span>
                 <span class="channel-text">
                   <strong>WhatsApp</strong>
@@ -292,7 +292,7 @@
   <footer class="site-footer">
     <div class="container footer-inner">
       <div class="footer-brand">
-        <img src="../static/Head y Footer/Logo de F&Y.png" alt="F&amp;Y Solutions" class="footer2-logo" />
+        <img src="{{ url_for('static', filename='Head y Footer/Logo de F&Y.png') }}" alt="F&amp;Y Solutions" class="footer2-logo" />
         <p>Asistencia virtual especializada para agentes de seguros de salud y vida.</p>
       </div>
 
@@ -301,12 +301,12 @@
         <div class="social-links">
           <a href="https://www.instagram.com/fy.solutions/" target="_blank" rel="noopener noreferrer"
              class="social-link" aria-label="Instagram de F&amp;Y Solutions">
-              <img src="../static/Head y Footer/instagram.png" alt="" class="footer-logo" />
+              <img src="{{ url_for('static', filename='Head y Footer/instagram.png') }}" alt="" class="footer-logo" />
             <span>Instagram</span>
           </a>
           <a href="https://www.facebook.com/FYSolutionsCorp?locale=es_LA" target="_blank" rel="noopener noreferrer"
              class="social-link" aria-label="Facebook de F&amp;Y Solutions">
-              <img src="../static/Head y Footer/facebook.png" alt="" class="footer-logo" />
+              <img src="{{ url_for('static', filename='Head y Footer/facebook.png') }}" alt="" class="footer-logo" />
             <span>Facebook</span>
           </a>
         </div>
