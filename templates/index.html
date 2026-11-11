@@ -3,10 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>F&amp;Y Solutions — Virtual Assistance</title>
+  <title>F&amp;Y Solutions - Virtual Assistance</title>
   <meta name="description" content="Asistentes virtuales especializados en servicios de Medicaid para agentes de seguros de salud en los 50 estados." />
   <link rel="stylesheet" href="../static/style.css">
   <link rel="stylesheet" href="../fonts/fonts.css">
+  <link rel="icon" href="../static/Head y Footer/Logo de F&Y.png" type="image/png">
 </head>
 <body>
 
@@ -20,12 +21,19 @@
         <img src="../static/Head y Footer/Logo de F&Y.png" alt="F&amp;Y Solutions logo" class="logo-img" />
       </a>
       <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
-        <span></span><span></span><span></span>
+        <span></span>
+        <span></span>
+        <span></span>
       </button>
       <ul class="nav-links" id="navLinks" role="list">
-        <li><a href="#servicios">Servicios</a></li>
-        <li><a href="#cumplimiento">Cumplimiento</a></li>
-        <li><a href="#nosotros">Nosotros</a></li>
+        
+        <li class="close-item">
+          <button class="nav-close" id="navClose" aria-label="Cerrar menú">&times;</button>
+        </li>
+
+        <li><a href="#servicios" class="nav-scn">Servicios</a></li>
+        <li><a href="#cumplimiento" class="nav-scn">Cumplimiento</a></li>
+        <li><a href="#nosotros" class="nav-scn">Nosotros</a></li>
         <li><a href="#contacto" class="nav-cta">Contáctanos</a></li>
       </ul>
     </nav>
@@ -37,9 +45,6 @@
          HERO
     ═══════════════════════════════════════ -->
     <section class="hero" id="hero">
-      <div class="hero-bg-placeholder" aria-hidden="true">
-        <!-- Sube tu imagen de fondo aquí: static/hero-bg.jpg -->
-      </div>
       <div class="hero-overlay" aria-hidden="true"></div>
       <div class="hero-content container">
         <p class="hero-eyebrow">Expertos en Soluciones de Asistencia Virtual</p>
@@ -187,30 +192,16 @@
         <div class="gallery-grid">
           <div class="gallery-item">
             <div class="gallery-placeholder" aria-label="Espacio para foto de equipo">
-              <img src="../static/El equipo detras/lewan.jpg" alt="Foto del equipo de F&amp;Y Solutions" class="gallery-photo" />
+              <img src="../static/El equipo detras/freddy.jpg" alt="Foto del equipo de F&amp;Y Solutions" class="gallery-photo" />
             </div>
-            <p class="gallery-caption">Nombre del colaborador · Cargo</p>
+            <p class="gallery-caption">Freddy Montero · CEO</p>
           </div>
 
           <div class="gallery-item">
             <div class="gallery-placeholder" aria-label="Espacio para foto de equipo">
-              <span>Sube tu foto aquí</span>
+              <img src="../static/El equipo detras/sebas.jpg" alt="Foto del equipo de F&amp;Y Solutions" class="gallery-photo" />
             </div>
-            <p class="gallery-caption">Nombre del colaborador · Cargo</p>
-          </div>
-
-          <div class="gallery-item">
-            <div class="gallery-placeholder" aria-label="Espacio para foto de equipo">
-              <span>Sube tu foto aquí</span>
-            </div>
-            <p class="gallery-caption">Nombre del colaborador · Cargo</p>
-          </div>
-
-          <div class="gallery-item">
-            <div class="gallery-placeholder" aria-label="Espacio para foto de equipo">
-              <span>Sube tu foto aquí</span>
-            </div>
-            <p class="gallery-caption">Nombre del colaborador · Cargo</p>
+            <p class="gallery-caption">Sebastian Montero · Administrador TI</p>
           </div>
         </div>
       </div>
@@ -226,7 +217,7 @@
           <div class="contact-info">
             <h2>Hablemos hoy</h2>
             <p>
-              ¿Listo para delegar la carga administrativa de tu agencia? Escríbenos
+              ¿Listo para delegar la carga administrativa de tu trabajo? Escríbenos
               por el canal que prefieras o usa el formulario.
             </p>
 
@@ -240,7 +231,7 @@
               </span>
               <span class="channel-text">
                 <strong>Correo electrónico</strong>
-              <span>fysolutionsas@gmail.com</span>
+              <span>Click aquí para copiar nuestro correo</span>
               </span>
               </a>
 
@@ -278,7 +269,7 @@
               <div class="form2-group">
                 <label for="mensaje">¿En qué podemos ayudarte?</label>
                 <textarea id="mensaje" name="mensaje" rows="4" 
-                  placeholder="Cuéntanos sobre tu agencia y lo que necesitas..." maxlength="350" required></textarea>
+                  placeholder="Cuéntanos sobre lo que necesitas..." maxlength="350" required></textarea>
               </div>
 
               <button type="submit" class="btn btn-primary btn-block" id="submitBtn">
@@ -324,7 +315,7 @@
 
     <div class="footer-bottom">
       <p>&copy; <span id="year"></span> F&amp;Y Solutions Asistencia Virtual. Todos los derechos reservados.</p>
-            <p>Bogotá - Miami</p>
+            <p>Colombia - Miami</p>
     </div>
   </footer>
 
@@ -339,6 +330,12 @@
       const open = navLinks.classList.toggle('is-open');
       toggle.setAttribute('aria-expanded', open);
       toggle.setAttribute('aria-label', open ? 'Cerrar menú' : 'Abrir menú');
+    });
+
+    // Cerrar menú con la X
+    const navClose = document.getElementById('navClose');
+    navClose.addEventListener('click', () => {
+    navLinks.classList.remove('is-open');
     });
 
     // Cierra menú al hacer clic en un enlace
