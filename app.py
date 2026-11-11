@@ -2,8 +2,11 @@ import os
 import re
 import smtplib
 from email.message import EmailMessage
+from dotenv import load_dotenv  # <-- Agrega esta línea
 
 from flask import Flask, jsonify, render_template, request
+
+load_dotenv()
 
 app = Flask(__name__)
 
